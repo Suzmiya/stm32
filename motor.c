@@ -1,0 +1,48 @@
+#include "dc_motor.h"
+#include "motor.h"
+
+//前进
+void car_forward(void)
+{
+	MOTOR1_IN1=0;MOTOR1_IN2=1;
+	MOTOR2_IN1=0;MOTOR2_IN2=1;
+	
+	MOTOR3_IN1=0;MOTOR3_IN2=1;
+	MOTOR4_IN1=0;MOTOR4_IN2=1;
+}
+//后退
+void car_back(void)
+{
+	MOTOR1_IN1=1;MOTOR1_IN2=0;
+	MOTOR2_IN1=1;MOTOR2_IN2=0;
+	
+	MOTOR3_IN1=1;MOTOR3_IN2=0;
+	MOTOR4_IN1=1;MOTOR4_IN2=0;
+}
+//左转
+void car_left(void)
+{
+	MOTOR1_IN1=0;MOTOR1_IN2=0;
+	MOTOR2_IN1=0;MOTOR2_IN2=0;
+	
+	MOTOR3_IN1=0;MOTOR3_IN2=1;
+	MOTOR4_IN1=0;MOTOR4_IN2=1;
+}
+//右转
+void car_right(void)
+{
+	MOTOR1_IN1=0;MOTOR1_IN2=1;
+	MOTOR2_IN1=0;MOTOR2_IN2=1;
+	
+	MOTOR3_IN1=0;MOTOR3_IN2=0;
+	MOTOR4_IN1=0;MOTOR4_IN2=0;
+}
+//停止
+void car_stop(void)
+{
+	MOTOR1_IN1=0;MOTOR1_IN2=0;
+	MOTOR2_IN1=0;MOTOR2_IN2=0;
+	
+	MOTOR3_IN1=0;MOTOR3_IN2=0;
+	MOTOR4_IN1=0;MOTOR4_IN2=0;
+}
